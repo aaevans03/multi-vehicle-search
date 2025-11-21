@@ -15,7 +15,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha app/test"
+    "test": "mocha -r ts-node/register src/test/**/*.test.ts",
+    "start": "ts-node src/index.ts"
   },
   "dependencies": {
     "@types/express": "^5.0.5",
@@ -23,11 +24,13 @@
     "eslint": "^9.39.1",
     "express": "^5.1.0",
     "nodemon": "^3.1.11",
-    "supertest": "^7.1.4",
-    "ts-node": "^10.9.2"
+    "supertest": "^7.1.4"
   },
   "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/supertest": "^6.0.3",
     "mocha": "^11.7.5",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }

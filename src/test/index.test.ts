@@ -1,5 +1,5 @@
-const app = require('../app.js');
-const request = require('supertest');
+import app = require('../app');
+import request = require('supertest');
 
 // Basic POST unit test
 describe('POST /', () => {
@@ -7,6 +7,6 @@ describe('POST /', () => {
         return request(app)
             .post('/')
             .expect(200)
-            .expect("Hello world!")
+            .expect("Hello World!")
     });
 });
